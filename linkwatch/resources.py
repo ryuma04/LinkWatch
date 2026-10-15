@@ -1,7 +1,7 @@
-import pkg_resources
+import importlib.resources
 
 TEMPLATE_NAME = "status.html.j2"
 
 
 def template_dir():
-    return pkg_resources.resource_filename("linkwatch", "templates")
+    return str(importlib.resources.files("linkwatch").joinpath("templates"))
